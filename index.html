@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snap</title>
+  <style>
+    .menu, .type2, .burger, .up{
+      display: none;
+    }
+    p:hover{
+      color: black;
+    }
+    button{
+      cursor: pointer;
+      opacity: 90%;
+    }
+    button:hover{
+      opacity: 60%;
+    }
+    .menu.active{
+      position: absolute;
+      z-index: 0;
+      margin-top: 50px;
+      width: 100px;
+      height: auto;
+      padding: 20px;
+      font-size: 14px;
+      background-color: rgb(225, 223, 223);
+      border: none;
+      border-radius: 10px;
+      color: rgb(0, 0, 0);
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .type2.active{
+      position: absolute;
+      z-index: 0;
+      margin-left: 150px;
+      margin-top: 50px;
+      width: 90px;
+      height: 140px;
+      padding: 20px;
+      font-size: 15px;
+      background-color: rgb(225, 223, 223);
+      border: none;
+      border-radius: 10px;
+      color: rgb(0, 0, 0);
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media screen and (max-width: 450px) {
+      .burger{
+        display: block;
+        width: 40px;
+        height: 35px;
+        cursor: pointer;
+        z-index: 1;
+      }
+      .burger.active{
+        display: block;
+        width: 40px;
+        height: 35px;
+        cursor: pointer;
+        z-index: 2;
+      }
+      .nav{
+        display: none;
+      }
+      .nav.active{
+        display: flex;
+        z-index: 0;
+        flex-direction: column;
+        background-color: rgb(182, 180, 180);
+        width: 200px;
+        height: 100vh;
+        padding: 10px;
+        right: 0;
+        top: 0;
+      }
+      /* .smth.active{
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(225, 223, 223);
+        width: 200px;
+        height: 100vh;
+        padding: 10px;
+        right: 0;
+        top: 0;
+      } */
+    }
+  </style>
+</head>
+<body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+  <header class="head" style="display: flex; justify-content: space-between; padding-inline: 20px;">
+    <div class="left" style="display: flex; align-items: center; justify-content: space-between;gap: 40px;">
+      <img src="logo.svg">
+      <img class="burger" src="icon-menu.svg">
+      <nav class="nav" style="gap: 40px; color: rgb(101, 101, 101);">
+        <p  style="align-items: center; gap: 3px; display: flex; z-index: 1;">Features<img class="tap" style="cursor: pointer;" src="icon-arrow-down.svg"></p>
+        <div class="menu">
+          <div class="first" style="display: flex; align-items: center; gap: 10px;">
+            <img src="icon-todo.svg">
+            <p>Todo List</p>
+          </div>
+          <div class="first" style="display: flex; align-items: center; gap: 10px;">
+            <img src="icon-calendar.svg">
+            <p>Calendar</p>
+          </div>
+          <div class="first" style="display: flex; align-items: center; gap: 10px;">
+            <img src="icon-reminders.svg">
+            <p>Remanders</p>
+          </div>
+          <div class="first" style="display: flex; align-items: center; gap: 10px;">
+            <img src="icon-planning.svg">
+            <p>Planning</p>
+          </div>
+        </div>
+        <p style="align-items: center; gap: 3px; display: flex;z-index: 1;">Company<img class="tap-2" style="cursor: pointer;" src="icon-arrow-down.svg"></p>
+        <div class="type2">
+          <p>History</p>
+          <p>Our Team</p>
+          <p>Blog</p>
+        </div>
+        <p style="cursor: pointer;">Careers</p>
+        <p style="cursor: pointer;">About</p>
+      </nav>
+    </div>
+    <div class="right1" style="display: flex;gap: 20px; font-size: 17px; color: rgb(100, 100, 100); align-items: center;">
+      <p>Login</p>
+      <button style="border: 2px solid gray; border-radius: 14px; width: 120px; background-color: transparent;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 17px;color: gray; height: 40px;">Register</button>
+    </div>
+  </header>
+  <div class="main" style="display: flex; padding: 140px; align-items: center; justify-content: space-between;">
+    <div class="left2" style="display: flex; flex-direction: column; gap: 20px;">
+      <h1 style="font-size: 80px; ;">Make remote work</h1>
+      <p class="main-parag" style="width: 470px;font-size: 20px;color: rgb(100, 100, 100);">Get your team in sync, no matter your location.
+        Streamline processes, create team rituals, and watch productivity soar.</p>
+        <button style="background-color: black; color: white; padding: 16px;border: none; width: 160px; border-radius: 10px;font-size: 16px; font-weight: bolder;">Learn more</button>
+        <div class="links" style="display: flex; gap: 26px; margin-top: 80px;">
+          <img src="client-databiz.svg">
+          <img src="client-audiophile.svg">
+          <img src="client-meet.svg">
+          <img src="client-maker.svg">
+        </div>
+    </div>
+    <div class="right" >
+      <img class="desktop" src="image-hero-desktop.png" width="500px">
+      <img class="mobile" src="image-hero-mobile.png" width="400px">
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | News homepage</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </body>
+  <style>
+    .parag:hover{
+      color: orange;
+      cursor: pointer;
+    }
+    .dark{
+      background-color: black;
+      color: white;
+    }
+    header{
+      display: flex;
+      gap: 100px;
+      align-items: center;
+      justify-content: space-between;
+      padding-inline: 40px;
+    }
+    .burger{
+      width: 30px;
+      height: 30px;
+      display: none;
+    }
+    nav{
+      display: flex;
+      gap:  50px;
+    }
+    @media  screen and (max-width: 450px) {
+        nav{
+          display: none;
+        }
+        .burger{
+          display: block;
+          z-index: 2;
+        }
+        header{
+          justify-content: space-between;
+          z-index: 0;
+        }
+        .active{
+          display: flex;
+          flex-direction: column;
+          background-color: white;
+          width: 200px;
+          position: absolute;
+          right: 0;
+          top:0;
+          gap:10px;
+          padding-top:50px;
+          padding-left:20px;
+          z-index: 1;
+        }
+        .burger-active{
+          content: url('close.png');
+        }
+      }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen p-14">
+  <header class="head">
+    <img src="logo.svg">
+    <nav>
+      <p class="parag">Home</p>
+      <p class="parag">Contact page</p>
+      <p class="parag">Adsress</p>
+      <p class="parag">Shop</p>
+      <p class="parag">Lorem.</p>
+    </nav>
+    <img src="burger-bar.png" class="burger" alt="">
+  </header>
+  <div class="main grid grid-cols-3 grid-rows-3 gap-3 mt-3 px-5">
+    <img class="box-1 col-span-2" src="image-web-3-desktop.jpg">
+    <img class="box-photo hidden" src="image-web-3-mobile.jpg">
+
+    <div class="box-2 md:grid-cols-3 col-span-1 row-span-2 bg-blue-950 p-3 pt-4">
+      <div class="text text-yellow-400">
+        <h2>New</h2>
+        <h4 class="font-light text-white">Hydrogen VS Electric Cars</h4>
+        <p class="font-extralight text-white">Will hydrogen-fueled cars ever catch up to EVs?</p>
+        <hr>
+        <h4 class="font-light text-white">The Downsides of AI Artistry</h4>
+        <p class="font-extralight text-white">What are the possible adverse effects of on-demand AI image generation?</p>
+        <hr>
+        <h4 class="font-light text-white">Is VC Funding Drying Up?</h4>
+        <p class="font-extralight text-white">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+      </div>
+    </div>
+
+    <div class="box-3 col-start-1 col-end-3 row-start-2 row-end-2 w-25">
+      <p class="box-3-text font-black text-3xl">The Bright Future of Web 3.0?</p>
+    </div>
+
+    <div class="box-4 col-start-2 col-end-2 row-start-2 row-end-3">
+      <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+      But is it really fulfilling its promise?</p>
+      <button class="btn btn-danger"> Read more</button>
+    </div>
+  </div>
+  <div class="box-5 grid grid-cols-3 gap-2 p-10 -mt-60">
+    <div class="box1 flex gap-3 ">
+      <img src="image-retro-pcs.jpg" style="width: 120px;">
+      <div class="box-text">
+        <p class="text-red-500 text-4xl font-bold">01</p>
+        <h5>Reviving Retro PCs</h5>
+       <p>What happens when old PCs are given modern upgrades?</p>
+      </div>
+    </div>
+    <div class="box2 flex gap-3">
+      <img src="image-top-laptops.jpg" style="width: 120px;">
+      <div class="box-text">
+        <p class="text-red-500 text-4xl font-bold">02</p>
+        <h5>Top 10 Laptops of 2022</h5>
+       <p>Our best picks for various needs and budgets.</p>
+      </div>
+    </div>
+    <div class="box3 flex gap-3">
+      <img src="image-gaming-growth.jpg" style="width: 120px;">
+      <div class="box-text">
+        <p class="text-red-500 text-4xl font-bold">03</p>
+        <h5>The Growth of Gaming</h5>
+       <p>How the pandemic has sparked fresh opportunities.</p>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html> -->
